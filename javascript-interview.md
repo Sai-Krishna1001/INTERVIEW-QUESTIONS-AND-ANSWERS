@@ -46,4 +46,19 @@ const users = [
   console.log("names", names);
 ```
 #### Q 1.2 Get back only active users
+##### Method 1:
+```bash
+  const names = [];
+  for(let i=0; i<users.length; i++){
+    if(users[i].isActive){
+      names.push(users[i].name);
+    }
+  }
+  console.log("names", names);
+```
+###### Method 2 ✔:
+```bash
+  const names = users.filter((user) => user.isActive).map((user) => user.name);
+  console.log("names", names);
+```
 #### Q 1.3 Sort users by ascending
